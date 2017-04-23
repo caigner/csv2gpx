@@ -4,19 +4,8 @@
 #
 # See https://www.gpsbabel.org/htmldoc-development/fmt_unicsv.html for more information
 #
-# csv format example:
+# See example.csv for csv format
 # 
-# name,lon,lat
-# 001,16.1234,48.1234 
-# 002,16.2345,48.2345
-#
-# or
-#
-# name,lat,lon
-# 001,48.1234,16.1234 
-# 002,48.2345,16.2345
-#
-
 
 GPSBABEL=/usr/bin/gpsbabel
 
@@ -24,7 +13,6 @@ if [[ -z "$1" ]]; then
    echo "Usage: csv2gpx.sh <input.csv>"
    exit 1
 fi
-
 
 EXTENSION=${1##*.}
 newfile=`basename "$1" .$EXTENSION`
