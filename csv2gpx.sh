@@ -21,6 +21,6 @@ OUT="$newfile".gpx
 
 echo -ne "\nConverting $1 to $OUT ... "
 
-$GPSBABEL -i unicsv -f "$1" -o gpx -F "$OUT"
+$GPSBABEL -t -i unicsv -f "$1" -o gpx -F "$OUT"
 
 echo -e "done.\n"
